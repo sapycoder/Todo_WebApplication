@@ -1,0 +1,99 @@
+TERMINAL
+npm install -g create-react-app
+npx create-react-app <Name of your app>
+---> Firebase console on chrome --console(right_coner)--create project on the firebase
+
+###cd amazon_clone ---npm start
+-------> USE npm start TO AGAIN START THE REACT SERVER
+---> go to firebase and register project on web --- gives you a command( copy paste in the terminal--can add sudo in mac )
+
+//INSTALL FIREBASE TOOLS
+npm install -g firebase-tools
+
+--->(after 4 steps) goto project overview--project  settings ---config doen below
+
+//AFTER HEADER CODING----INSTALL FOR ICONS
+--->npm install @material-ui/core  
+--->npm install @material-ui/icons
+
+//REACT ROUTER INSTALL
+npm install react-router-dom
+npm audit fix    --->IF NOT INSTALLED 
+npm fund
+
+//REACT CURRENCY FORMAT INSTALL
+npm install react-currency-format
+
+//FOR LOGIN AUTHENTICAION INSTALL FIREBASE IN APP ( goto FIREASE website and >> authenticate >> signIn_method >> enable email )
+ npm install firebase
+
+//TO PUSH YOUR APP TO GOOGLE AND SHARE WITH FRNDS
+firebase login    >>>  Y    >>>        ( use firebase logou to switch account___MAKE SRE YOU SELECT THE ACCOUNT YOU CREAD IN THE FIREBASE PROJECT)
+firebase init     >>>  Y    >>>  choose the HOSING option ( with SPACEBAR to select )   >>>  Use an Existing project
+>>>    build      >>>  Y    >>>   npm run build  ( create optimized app firebase)       >>>  firebase deploy
+
+https://cra.link/deployment
+Project Console: https://console.firebase.google.com/project/challenge-79ced/overview
+Hosting URL: https://challenge-79ced.web.app
+
+//TO HANDLE THE PAYMENTS FROM THE USER ( stripe is used )
+npm install @stripe/stripe-js
+npm install @stripe/react-stripe-js
+
+//SIGN INTO STRIPE A/C
+>>> goto stripe and create A/C >>> DEVELOPERS --->  API KEYS >>> GET DEVELOPER KEYS AND COPY IT
+
+//TO CHARGE USER AXIOS LIBRARY INSTALLED
+npm install axios
+
+//NOW FOR AXIOS AND PAYMENT STUFF AND **** (IMP) BACKEND CLOUD FUNCTIONING   ---( creates a function folder)
+firebase init     >>>   choose the FUNCTIONS option    >>>  choose JAVASCRIPT    >>>     Y
+npm i express
+npm i cors
+npm i stripe
+
+>>> private key from API KEYS >>>   sk_test_51IqHN0SEvEh1JNN3xO714lxv5Pe9Bp4gupp9E4jGB2GprDjbv6oU6riQ7PV0lilOutBxP5TPLEzq0FKfYmcednoJ00z8yR6FKB
+
+//CODE IN index.js IN functions (after coding in index.js)  ------      to again start the firebase
+firebase emulators:start    >>>>        http://localhost:4000  (provides an url)
+                                        http://localhost:5001/challenge-79ced/us-central1/api
+
+>>>GOTO FIREBASE AND THE DATABASE AND  >>  TEST MODE  >>>   NEXT NEXT
+
+//to get moment INSTALLED FOR TIMESTAMP
+npm i moment
+_____________________________________________________________________________________
+
+remove test files and logo
+app.js --> logo remove and everything between the div class and thn make changes in the app.css file 
+
+the components like header and home stuff keep first letter CAPITALISE
+the main app.js file should be in all SMALL 
+
+#--> rfce to get components-------CODE
+
+index.js--> background color
+
+{basket?.length} >>>> ? TO HANDLE ERROR IF EXISTS
+
+REACT ROUTER TO CONNCT TWO PAGES IN THE WEBSITE
+FIREBASE -- FOR HOSTING--FOR DATABASE--AND THEN CLOUD TO KEEP THE TRACK OF THE PRODUCTS AND ITEMS
+
+Everytime the basket is changed he new pin is generated for the user in stripe
+
+
+//AT THE END
+----> goto functions file and ( DDEPLY FUNCTIONS (BACKEND) TO THE SERVER)   ---- >MAKE SURE YOU ARE A BLAZE CUSTOMER ON FIREBASE
+----> on FIREBASE goto functions ---->>>> COPY THE URL  AND PASTE IN AXIOS  >>>>> REAL RUNNING URL 
+firebase deploy --only functions
+
+----> goto 
+cd amazon_clone OR cd..
+npm run build
+firebase deploy --only  hosting   //only the FRONTEND
+
+
+//THE BACKEND ONLY WORKS IF YOU RUN 
+firebase emulators:start    >>>>    proceed to pay (it pays)
+
+ctrl + shift + R ------> HARD REFREST
