@@ -1,0 +1,29 @@
+>> npm create-react-app [name of app]
+>> npm start
+
+remove logo, test files and everything in app.js div
+START CODING
+
+jsx = js + html     >>>         html{js}
+
+state =>    shot term memory
+const [todos,setTodos] = useState([]) =>   array created = short term memory/state created([empty array])
+todos>>>array map>>>goes to each element in the array todo>>>the element in the array
+
+REACT >> FRONTEND   ->  DJANGO >> BACKEND   API >> TO COMMUNICATE BTW FRONTEND AND BACKEND USING FIREBASE
+
+<input className="input" value={input} onChange={event => setInput(event.target.value) }/>     {/*value >>  empty as intialised empty at first  setinput >>> to change everytime input on change of value keeps the input rendered and we have it in memory*/}
+
+
+>>  install @material-ui/core 
+>> npm install @material-ui/icons
+
+REACT HAS A "COMPONENT" <NEW FILE  />   -----> CAN USE IT SEVERAL ITEMS
+
+hooks  -> functional component  ; classbase component --> old version
+
+>>firebase init >> hosting >> select project >> y >> y >> build >> npm run build    >> firebase deploy
+
+
+npm run build && firebase deploy
+package.json >> scripts >> deploy>> deploy: "npm run build && firebase deploy"
